@@ -1,10 +1,13 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appID": "UN2Y9F295R.com.AndyTung.Super-Infusion-Calculator",
-        "paths": [ "/load" ]
+        "appIDs": "UN2Y9F295R.com.AndyTung.Super-Infusion-Calculator",
+        "components": [
+          {
+            "/": "/load"
+          }
+        ]
       }
     ]
   }

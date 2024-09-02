@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.iobear.ivdrugs",  // Your app's package name
+      "sha256_cert_fingerprints": [
+        "FA:61:81:86:84:4C:6A:65:D5:62:DB:06:DC:D2:F0:6D:86:3F:39:C2:4E:AC:B9:63:0A:E3:53:BA:F9:14:42:16"
+      ]
+    }
+  }
+]

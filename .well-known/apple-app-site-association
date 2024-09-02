@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": "UN2Y9F295R.com.AndyTung.Super-Infusion-Calculator",
+        "appIDs": ["UN2Y9F295R.com.AndyTung.Super-Infusion-Calculator"],
         "components": [
           {
             "/": "/load"

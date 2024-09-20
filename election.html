@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生名單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .column {
+            width: 48%;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .student {
+            margin-bottom: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        .wheel-link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>學生名單</h1>
+    
+    <div class="wheel-link">
+        <a href="https://wheelofnames.com/zh-HK/" target="_blank">https://wheelofnames.com/zh-HK/</a>
+    </div>
+    
+    <div class="container">
+        <div class="column">
+            <h2>碩一</h2>
+			
+            <button onclick="copyToClipboard('master1')">複製碩一學生名單</button>
+            <div id="master1">
+                <div class="student">77131118 陳品臻</div>
+                <div class="student">77131142 楊梓暄</div>
+                <div class="student">77131037 羅澤聰</div>
+                <div class="student">77131045 吳岳蓁</div>
+                <div class="student">77131134 郭招君</div>
+                <div class="student">77131053 歐育成</div>
+                <div class="student">77131100 范雍泰</div>
+                <div class="student">77131126 王冠智</div>
+                <div class="student">77131079 林子淳</div>
+                <div class="student">77131061 黃偉凱</div>
+                <div class="student">77131029 林祐賸</div>
+                <div class="student">77131011 蔡佳緯</div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <h2>碩二</h2>
+			
+            <button onclick="copyToClipboard('master2')">複製碩二學生名單</button>
+            <div id="master2">
+                <div class="student">77121082 董錦松</div>
+                <div class="student">77121113 詹勝光</div>
+                <div class="student">77121121 顏伯丞</div>
+                <div class="student">77121155 紀柏誠</div>
+                <div class="student">77121016 陳柏仰</div>
+                <div class="student">77121090 劉政穎</div>
+                <div class="student">77121066 葉育哲</div>
+                <div class="student">77121040 林俊廷</div>
+                <div class="student">77121074 楊岱穎</div>
+                <div class="student">77121032 張藝憲</div>
+                <div class="student">77121105 陳杰華</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = Array.from(element.getElementsByClassName('student'))
+                .map(el => el.textContent.trim())
+                .join('\n');
+            
+            navigator.clipboard.writeText(text).then(function() {
+                alert('學生名單已複製到剪貼簿！');
+            }, function(err) {
+                console.error('無法複製文字: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
